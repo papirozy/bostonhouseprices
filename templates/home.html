@@ -1,1 +1,64 @@
 <h1>Testing home page...</h1>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <div>
+      <h1>Boston House Prediction</h1>
+
+      <form action="{{url_for('predict')}}" method="post">
+        <input type="text" placeholder="CRIM" name="CRIM" required="required" />
+        <br />
+        <input type="text" placeholder="ZN" name="ZN" required="required" />
+        <br />
+        <input
+          type="text"
+          placeholder="INDUS"
+          name="INDUS"
+          required="required"
+        />
+        <br />
+        <input type="text" placeholder="CHAS" name="CHAS" required="required" />
+        <br />
+        <input type="text" placeholder="NOX" name="NOX" required="required" />
+        <br />
+        <input type="text" placeholder="RM" name="RM" required="required" />
+        <br />
+        <input type="text" placeholder="AGE" name="AGE" required="required" />
+        <br />
+        <input type="text" placeholder="DIS" name="DIS" required="required" />
+        <br />
+        <input type="text" placeholder="RAD" name="RAD" required="required" />
+        <br />
+        <input type="text" placeholder="TAX" name="TAX" required="required" />
+        <br />
+        <input
+          type="text"
+          placeholder="PTRATIO"
+          name="PTRATIO"
+          required="required"
+        />
+        <br />
+        <input type="text" placeholder="B" name="B" required="required" />
+        <br />
+        <input
+          type="text"
+          placeholder="LSTAT"
+          name="LSTAT"
+          requird="required"
+        />
+        <br />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+
+      <br />
+      <br />
+    </div>
+    {{prediction_text}}
+  </body>
+</html>
